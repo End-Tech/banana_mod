@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "all": "andris_mod:block/banana_leaves"
+    "all": "banana-mod:block/banana_leaves"
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "andris_mod",
+  "id": "banana-mod",
   "version": "${version}",
 
   "name": "Andris Fabric Mod",
@@ -14,16 +14,16 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/andris_mod/icon.png",
+  "icon": "assets/banana-mod/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.fabricmc.example.BananaMod"
     ]
   },
   "mixins": [
-    "andris_mod.json"
+    "banana-mod.json"
   ],
 
   "depends": {

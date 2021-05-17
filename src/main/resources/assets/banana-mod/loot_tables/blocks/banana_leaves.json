@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "andris_mod:banana_leaves"
+              "name": "banana-mod:banana_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "andris_mod:banana"
+              "name": "banana-mod:banana"
             }
           ]
         }

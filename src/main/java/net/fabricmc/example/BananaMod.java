@@ -12,12 +12,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 
-public class ExampleMod implements ModInitializer {
+public class BananaMod implements ModInitializer {
+
+	public static final String MOD_NAME = "banana-mod";
 
 	public static final Item FABRIC_ITEM = new Item(new Item.Settings().group(ItemGroup.MISC));
 	public static final Item BANANA_ITEM = new Item(new Item.Settings().group(ItemGroup.MISC));
 
 	public static final Block BANANA_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(2.0f));
+	public static final Block BANANA_LOG = new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0f));
 
 	@Override
 	public void onInitialize() {
@@ -29,17 +32,16 @@ public class ExampleMod implements ModInitializer {
 		registerBlocks();
 		//items
 		registerItems();
-
-
 	}
-
 
 	public void registerBlocks() {
-		Registry.register(Registry.BLOCK, new Identifier("andris_mod", "banana_leaves"), BANANA_LEAVES);
+		Registry.register(Registry.BLOCK, new Identifier(MOD_NAME, "banana_leaves"), BANANA_LEAVES);
+		Registry.register(Registry.BLOCK, new Identifier(MOD_NAME, "banana_log"), BANANA_LOG);
 	}
+
 	public void registerItems(){
-		Registry.register(Registry.ITEM, new Identifier("andris_mod", "fabric_item"), FABRIC_ITEM);
-		Registry.register(Registry.ITEM, new Identifier("andris_mod", "banana_item"), BANANA_ITEM);
-		Registry.register(Registry.ITEM, new Identifier("andris_mod", "banana_leaves"), new BlockItem(BANANA_LEAVES, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_NAME, "fabric_item"), FABRIC_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MOD_NAME, "banana_item"), BANANA_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MOD_NAME, "banana_leaves"), new BlockItem(BANANA_LEAVES, new FabricItemSettings().group(ItemGroup.MISC)));
 	}
 }
